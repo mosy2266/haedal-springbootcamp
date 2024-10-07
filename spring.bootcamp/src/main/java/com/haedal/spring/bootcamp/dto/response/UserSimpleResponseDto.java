@@ -1,11 +1,11 @@
-package com.haedal.spring.bootcamp.ResponseDTO;
+package com.haedal.spring.bootcamp.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class UserSimpleResponseDTO {
+public class UserSimpleResponseDto {
     private Long id;
     private String username;
     private String name;
