@@ -49,7 +49,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{userId}/profile")
-    public ResponseEntity<UserDetailResponseDto> getUserProfile(@PathVariable Long userId, HttpServletRequest request) {
+    public ResponseEntity<UserDetailResponseDto> getUserProfile(@PathVariable("userId") Long userId, HttpServletRequest request) {
         User currentUser = authService.getCurrentUser(request);
 
         UserDetailResponseDto userDetailResponseDto = userService.getUserDetail(currentUser, userId);
