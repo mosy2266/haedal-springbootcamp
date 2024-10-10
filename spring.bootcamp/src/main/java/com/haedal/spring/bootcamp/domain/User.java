@@ -42,6 +42,12 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Like> likes;
 
+    @OneToMany(mappedBy = "follower")
+    private List<Follow> followings;
+
+    @OneToMany(mappedBy = "following")
+    private List<Follow> followers;
+
     public User(String username, String password, String name) {
         this.username = username;
         this.password = password;
